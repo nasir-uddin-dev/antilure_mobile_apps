@@ -1,71 +1,12 @@
 import 'package:antilure_mobile_apps/core/constants/route_names.dart';
+import 'package:antilure_mobile_apps/features/home_screen/widgets/scams_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-
-  final List<Map<String, dynamic>> _items = [
-    {
-      'icon': Container(
-        width: 64.r,
-        height: 64.r,
-        decoration: BoxDecoration(
-          color: Color(0xFFEAF6FD),
-          borderRadius: BorderRadius.circular(100.r),
-        ),
-        child: Center(
-          child: Icon(
-            Ionicons.link_outline,
-            size: 32.sp,
-            color: Color(0xFF2FA4E7),
-          ),
-        ),
-      ),
-      'title': "Check a Link",
-      'subTitle': "Paste a URL to see if it's safe",
-    },
-    {
-      'icon': Container(
-        width: 64.r,
-        height: 64.r,
-        decoration: BoxDecoration(
-          color: Color(0xFFEEF2FF),
-          borderRadius: BorderRadius.circular(100.r),
-        ),
-        child: Center(
-          child: Icon(
-            Ionicons.qr_code_outline,
-            size: 32.sp,
-            color: Color(0xFF4F46E5),
-          ),
-        ),
-      ),
-      'title': "Scan QR Code",
-      'subTitle': "Safely scan QR codes before opening them",
-    },
-    {
-      'icon': Container(
-        width: 64.r,
-        height: 64.r,
-        decoration: BoxDecoration(
-          color: Color(0xFFFFF7ED),
-          borderRadius: BorderRadius.circular(100.r),
-        ),
-        child: Center(
-          child: Icon(
-            Ionicons.alert_outline,
-            size: 32.sp,
-            color: Color(0xFFEA580C),
-          ),
-        ),
-      ),
-      'title': "I Think This Is a Scam",
-      'subTitle': "Get step-by-step guidance if you suspect fraud",
-    },
-  ];
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -160,61 +101,44 @@ class HomeScreen extends StatelessWidget {
             child: SingleChildScrollView(
               padding: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 24.h),
               child: Column(
-                children: List.generate(_items.length, (int index) {
-                  final item = _items[index];
-                  return GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, RouteNames.checkLinkScreen);
-                    },
-                    child: Container(
-                      margin: EdgeInsets.only(top: 16.h),
-                      width: double.infinity,
-                      height: 200.h,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16.r),
-                        border: Border.all(color: Color(0xFFE9E9EA)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.1),
-                            spreadRadius: 1,
-                            blurRadius: 4,
-                            offset: Offset(0, 2),
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          item['icon'] as Widget,
-                          SizedBox(height: 16.h),
-                          Text(
-                            item['title'] as String,
-                            style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Color(0xFF070707),
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(height: 8.h),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 32.w),
-                            child: Text(
-                              item['subTitle'] as String,
-                              style: TextStyle(
-                                fontSize: 16.sp,
-                                color: Color(0xFF4A4C56),
-                                fontWeight: FontWeight.w400,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ],
-                      ),
+                children: [
+                  ScamsBoxWidget(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.checkLinkScreen,
                     ),
-                  );
-                }),
+                    title: "Check a Link",
+                    subTitle: "Paste a URL to see if it's safe",
+                    icon: Icon(
+                      Ionicons.link_outline,
+                      size: 32.sp,
+                      color: Color(0xFF2FA4E7),
+                    ),
+                  ),
+                  ScamsBoxWidget(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.scanQrCodeScreen,
+                    ),
+                    title: "Scan QR Code",
+                    subTitle: "Safely scan QR codes before opening them",
+                    icon: Icon(
+                      Ionicons.qr_code_outline,
+                      size: 32.sp,
+                      color: Color(0xFF4145EF),
+                    ),
+                  ),
+                  ScamsBoxWidget(
+                    onTap: () {},
+                    title: "I Think This Is a Scam",
+                    subTitle: "Get step-by-step guidance if you suspect fraud",
+                    icon: Icon(
+                      Ionicons.alert_outline,
+                      size: 32.sp,
+                      color: Color(0xFFF97316),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

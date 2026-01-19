@@ -1,5 +1,6 @@
 import 'package:antilure_mobile_apps/core/provider/bottom_navigation_provider/navigation_provider.dart';
 import 'package:antilure_mobile_apps/features/home_screen/view/home_screen.dart';
+import 'package:antilure_mobile_apps/features/report_screen/view/report_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +15,7 @@ class ParentScreen extends ConsumerStatefulWidget {
 
 class _ParentScreenState extends ConsumerState<ParentScreen> {
   // list of pages to display
-  final List<Widget> _pages = [HomeScreen()];
+  final List<Widget> _pages = [HomeScreen(), ReportScreen()];
 
   @override
   Widget build(BuildContext context) {
