@@ -144,8 +144,8 @@ class ScanQrCodeScreen extends StatelessWidget {
                           Row(
                             spacing: 10.w,
                             children: [
-                              Expanded(child: customButton(text: "Go Back")),
-                              Expanded(child: borderButton(text: "Proceed")),
+                              Expanded(child: customButton(text: "Go Back", onTap: () {  })),
+                              Expanded(child: borderButton(text: "Proceed", onTap: () {  })),
                             ],
                           ),
                         ],

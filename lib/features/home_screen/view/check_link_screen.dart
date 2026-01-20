@@ -95,7 +95,7 @@ class _CheckLinkScreenState extends State<CheckLinkScreen> {
                             ),
                           ),
                           SizedBox(height: 10.h),
-                          customButton(text: "Check Link"),
+                          customButton(text: "Check Link", onTap: () {  }),
                         ],
                       ),
                     ),

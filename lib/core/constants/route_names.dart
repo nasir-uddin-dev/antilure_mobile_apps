@@ -7,4 +7,8 @@ class RouteNames {
   static const String reportScreen = '/reportScreen';
   static const String suspiciousTextMessageScreen =
       '/suspiciousTextMessageScreen';
+  static const String lastSuspiciousTextMessageScreen =
+      '/lastSuspiciousTextMessageScreen';
+  static const String historyScreen = '/historyScreen';
+  static const String settingScreen = '/settingScreen';
 }
