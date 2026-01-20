@@ -5,4 +5,6 @@ class RouteNames {
   static const String checkLinkScreen = '/checkLinkScreen';
   static const String scanQrCodeScreen = '/scanQrCodeScreen';
   static const String reportScreen = '/reportScreen';
+  static const String suspiciousTextMessageScreen =
+      '/suspiciousTextMessageScreen';
 }

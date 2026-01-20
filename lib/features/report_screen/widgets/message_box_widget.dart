@@ -15,39 +15,49 @@ class MessageBoxWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        width: 40.r,
-        height: 40.r,
-        decoration: BoxDecoration(color: Color(0xFFEAF6FD)),
-        child: icon,
+    return Container(
+      height: 127.h,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16.r),
       ),
-      title: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 18.sp,
-              color: Color(0xFF070707),
-              fontWeight: FontWeight.w600,
-            ),
+      child: ListTile(
+        leading: Container(
+          width: 40.r,
+          height: 40.r,
+          decoration: BoxDecoration(
+            color: Color(0xFFEAF6FD),
+            borderRadius: BorderRadius.circular(100.r),
           ),
-          SizedBox(height: 4.h),
-          Text(
-            subTitle,
-            style: TextStyle(
-              fontSize: 16.sp,
-              color: Color(0xFF4A4C56),
-              fontWeight: FontWeight.w400,
+          child: icon,
+        ),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 18.sp,
+                color: Color(0xFF070707),
+                fontWeight: FontWeight.w600,
+              ),
             ),
-          ),
-        ],
-      ),
-      trailing: Column(
-        children: [
-          Switch(value: true, onChanged: (bool){})
-        ],
+            SizedBox(height: 10.h),
+            Text(
+              subTitle,
+              style: TextStyle(
+                fontSize: 16.sp,
+                color: Color(0xFF4A4C56),
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
+        trailing: SizedBox(
+          height: 70.h,
+          child: Switch(value: true, onChanged: (bool) {}),
+        ),
       ),
     );
   }

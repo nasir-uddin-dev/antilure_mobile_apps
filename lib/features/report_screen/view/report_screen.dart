@@ -1,4 +1,5 @@
 import 'package:antilure_mobile_apps/core/common_widgets/app_bar_widget.dart';
+import 'package:antilure_mobile_apps/core/constants/route_names.dart';
 import 'package:antilure_mobile_apps/features/report_screen/widgets/message_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -61,11 +62,52 @@ class ReportScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.suspiciousTextMessageScreen,
+                      );
+                    },
+                    child: MessageBoxWidget(
+                      icon: Icon(
+                        Ionicons.chatbox_outline,
+                        color: Colors.blue.shade600,
+                      ),
+                      title: "Suspicious Text Message",
+                      subTitle:
+                          "Got a strange text about a package,bank, or prize?",
+                    ),
+                  ),
+                  SizedBox(height: 10.h),
                   MessageBoxWidget(
-                    icon: Icon(Ionicons.chatbox),
-                    title: "Suspicious Text Message",
+                    icon: Icon(
+                      Icons.phone_android,
+                      color: Colors.blue.shade600,
+                    ),
+                    title: "Suspicious Phone Call",
                     subTitle:
-                        "Got a strange text about a package,\nbank, or prize?",
+                        "Someone calling about taxes, tech support, or your accout?",
+                  ),
+                  SizedBox(height: 10.h),
+                  MessageBoxWidget(
+                    icon: Icon(
+                      Icons.phone_android,
+                      color: Colors.blue.shade600,
+                    ),
+                    title: "Fake Delivery Message",
+                    subTitle:
+                        "Message about a package you need to pay for or reschedule?",
+                  ),
+                  SizedBox(height: 10.h),
+                  MessageBoxWidget(
+                    icon: Icon(
+                      Icons.person_outline,
+                      color: Colors.blue.shade600,
+                    ),
+                    title: "Social Media Scam",
+                    subTitle:
+                        "Friend asking for money or a too good to be true offer?",
                   ),
                 ],
               ),

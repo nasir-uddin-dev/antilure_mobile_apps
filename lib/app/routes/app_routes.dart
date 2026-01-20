@@ -3,6 +3,7 @@ import 'package:antilure_mobile_apps/features/home_screen/view/check_link_screen
 import 'package:antilure_mobile_apps/features/home_screen/view/scan_qr_code_screen.dart';
 import 'package:antilure_mobile_apps/features/parent_screen/parent_screen.dart';
 import 'package:antilure_mobile_apps/features/report_screen/view/report_screen.dart';
+import 'package:antilure_mobile_apps/features/report_screen/view/suspicious_text_message_screen.dart';
 import 'package:antilure_mobile_apps/features/splash_screen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -14,6 +15,7 @@ class AppRoutes{
     RouteNames.parentScreen:(context) => const ParentScreen(),
     RouteNames.checkLinkScreen:(context) => const CheckLinkScreen(),
     RouteNames.scanQrCodeScreen:(context) => const ScanQrCodeScreen(),
-    RouteNames.reportScreen:(context) => const ReportScreen()
+    RouteNames.reportScreen:(context) => const ReportScreen(),
+    RouteNames.suspiciousTextMessageScreen:(context) => const SuspiciousTextMessageScreen()
   };
 }
