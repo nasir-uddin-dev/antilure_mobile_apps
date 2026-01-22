@@ -23,7 +23,7 @@ class AppBarWidget extends StatelessWidget {
       child: ListTile(
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
-          child: Icon(Icons.arrow_back, size: 24.sp, color: Colors.black),
+          child: Icon(Icons.arrow_back_ios_new_outlined, size: 24.sp, color: Colors.black),
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -88,6 +88,7 @@ class _SuspiciousTextMessageScreenState
                 SizedBox(height: 8.h),
                 LinearProgressIndicator(
                   color: Color(0xFF2FA4E7),
+                  backgroundColor: Color(0xFFD2D2D5),
                   value: (currentPage + 1) / 4,
                 ),
                 SizedBox(height: 16.h),

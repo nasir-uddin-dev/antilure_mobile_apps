@@ -2,7 +2,6 @@ import 'package:antilure_mobile_apps/core/constants/route_names.dart';
 import 'package:antilure_mobile_apps/features/home_screen/widgets/scams_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.transparent,),
       backgroundColor: Color(0xFFF2F2F2),
       extendBodyBehindAppBar: true,
       body: Column(
@@ -33,8 +33,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Center(
                       child: ListTile(
-                        leading: SvgPicture.asset(
-                          "assets/images/flutter_logo.svg",
+                        leading: Image.asset(
+                          "assets/images/home_img.png",
                           width: 50.r,
                           height: 50.r,
                         ),

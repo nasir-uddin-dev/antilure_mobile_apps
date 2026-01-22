@@ -78,6 +78,7 @@ class page_3_widget extends StatelessWidget {
         SizedBox(height: 16.h),
         Expanded(
           child: Container(
+            width: double.infinity,
             padding: EdgeInsets.all(16.r),
             decoration: BoxDecoration(
               color: Color(0xFFFEECEE),
@@ -92,7 +93,7 @@ class page_3_widget extends StatelessWidget {
               ],
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "Do not:",
@@ -103,10 +104,47 @@ class page_3_widget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 8.h),
-                Text(
-                  "Messages like this often try to steal personal or financial information",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.sp, color: Color(0xFF4A4C56)),
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Color(0xFFFBD8DB),
+                    radius: 25.r,
+                  ),
+                  title: Text(
+                    "Click link in the message",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      color: Color(0xFF4A4C56),
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Color(0xFFFBD8DB),
+                    radius: 25.r,
+                  ),
+                  title: Text(
+                    "Reply to the message",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      color: Color(0xFF4A4C56),
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Color(0xFFFBD8DB),
+                    radius: 25.r,
+                  ),
+                  title: Text(
+                    "Share personal details or codes",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      color: Color(0xFF4A4C56),
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
               ],
             ),

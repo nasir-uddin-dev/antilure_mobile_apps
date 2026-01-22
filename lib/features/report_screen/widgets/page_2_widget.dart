@@ -73,7 +73,7 @@ class page_2_widget extends StatelessWidget {
                   SizedBox(height: 16.h),
                   BuildOptions(
                     title: "Something else",
-                    subTitle: "Doesn't fit the above", icon: Icons.question_answer,
+                    subTitle: "Doesn't fit the above", icon: Icons.question_mark_outlined,
                   ),
                 ],
               ),

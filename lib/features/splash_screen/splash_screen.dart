@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:antilure_mobile_apps/core/constants/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.pushNamed(context, RouteNames.parentScreen);
+      Navigator.pushReplacementNamed(context, RouteNames.parentScreen);
     });
   }
 
@@ -32,8 +31,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Expanded(
               child: Center(
-                child: SvgPicture.asset(
-                  "assets/images/flutter_logo.svg",
+                child: Image.asset(
+                  "assets/images/logo.png",
                   width: 240.w,
                   height: 240.h,
                 ),
