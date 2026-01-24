@@ -23,7 +23,6 @@ class _CheckLinkScreenState extends State<CheckLinkScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF2F2F2),
       body: Column(
         children: [
           AppBarWidget(title: 'Check a Link', subTitle: "Paste a URL to see if it's safe",),

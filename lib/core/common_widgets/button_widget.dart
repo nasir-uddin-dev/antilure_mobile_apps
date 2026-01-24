@@ -7,7 +7,6 @@ Widget customButton({required String text, required VoidCallback onTap}) {
     child: Container(
       width: double.infinity,
       height: 56.h,
-      padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 18.h),
       decoration: BoxDecoration(
         color: Color(0xFF2FA4E7),
         borderRadius: BorderRadius.circular(16.r),

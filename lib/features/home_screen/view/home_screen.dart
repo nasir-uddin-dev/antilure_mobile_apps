@@ -1,5 +1,5 @@
 import 'package:antilure_mobile_apps/core/constants/route_names.dart';
-import 'package:antilure_mobile_apps/features/home_screen/widgets/scams_box_widget.dart';
+import 'package:antilure_mobile_apps/features/home_screen/view/widgets/scams_box_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ionicons/ionicons.dart';

@@ -1,10 +1,9 @@
 import 'package:antilure_mobile_apps/features/report_screen/widgets/build_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ionicons/ionicons.dart';
 
-class page_2_widget extends StatelessWidget {
-  const page_2_widget({super.key});
+class Page2Widget extends StatelessWidget {
+  const Page2Widget({super.key});
 
   @override
   Widget build(BuildContext context) {

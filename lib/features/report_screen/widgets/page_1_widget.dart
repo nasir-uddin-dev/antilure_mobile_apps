@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class page_1_widget extends StatelessWidget {
-  const page_1_widget({super.key});
+class Page1Widget extends StatelessWidget {
+  const Page1Widget({super.key});
 
   @override
   Widget build(BuildContext context) {

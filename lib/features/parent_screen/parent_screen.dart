@@ -1,5 +1,4 @@
 import 'package:antilure_mobile_apps/core/provider/bottom_navigation_provider/navigation_provider.dart';
-import 'package:antilure_mobile_apps/features/histor_screen/view/history_screen.dart';
 import 'package:antilure_mobile_apps/features/home_screen/view/home_screen.dart';
 import 'package:antilure_mobile_apps/features/report_screen/view/report_screen.dart';
 import 'package:antilure_mobile_apps/features/setting_screen/view/setting_screen.dart';
@@ -7,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ionicons/ionicons.dart';
+
+import '../history_screen/view/history_screen.dart';
 
 class ParentScreen extends ConsumerStatefulWidget {
   const ParentScreen({super.key});
@@ -29,9 +30,8 @@ class _ParentScreenState extends ConsumerState<ParentScreen> {
     //Watch the current index from the provider
     final currentIndex = ref.watch(currentIndexProvider);
     return Scaffold(
-      backgroundColor: Color(0xFFF2F2F2),
       body: _pages[currentIndex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 112.h,
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,

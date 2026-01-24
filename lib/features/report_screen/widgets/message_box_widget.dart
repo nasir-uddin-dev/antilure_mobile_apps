@@ -56,7 +56,7 @@ class MessageBoxWidget extends StatelessWidget {
         ),
         trailing: SizedBox(
           height: 70.h,
-          child: Switch(value: true, onChanged: (bool) {}),
+          child: Switch(value: true, onChanged: (value) {}),
         ),
       ),
     );

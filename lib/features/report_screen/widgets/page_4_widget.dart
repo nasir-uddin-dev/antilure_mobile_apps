@@ -2,8 +2,8 @@ import 'package:antilure_mobile_apps/features/report_screen/widgets/build_report
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class page_4_widget extends StatelessWidget {
-  const page_4_widget({super.key});
+class Page4Widget extends StatelessWidget {
+  const Page4Widget({super.key});
 
   @override
   Widget build(BuildContext context) {

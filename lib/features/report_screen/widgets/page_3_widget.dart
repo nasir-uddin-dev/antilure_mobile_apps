@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ionicons/ionicons.dart';
 
-class page_3_widget extends StatelessWidget {
-  const page_3_widget({super.key});
+class Page3Widget extends StatelessWidget {
+  const Page3Widget ({super.key});
 
   @override
   Widget build(BuildContext context) {

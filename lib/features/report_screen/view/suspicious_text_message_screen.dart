@@ -65,7 +65,6 @@ class _SuspiciousTextMessageScreenState
     final currentPage = ref.watch(suspiciousTextPageProvider);
 
     return Scaffold(
-      backgroundColor: Color(0xFFF2F2F2),
       body: Column(
         children: [
           AppBarWidget(
@@ -112,13 +111,13 @@ class _SuspiciousTextMessageScreenState
                       },
                       children: [
                         // Page 1
-                        page_1_widget(),
+                        Page1Widget(),
                         // Page 2
-                        page_2_widget(),
+                        Page2Widget(),
                         // Page 3
-                        page_3_widget(),
+                        Page3Widget(),
                         // Page 4
-                        page_4_widget(),
+                        Page4Widget(),
                       ],
                     ),
                   ),
