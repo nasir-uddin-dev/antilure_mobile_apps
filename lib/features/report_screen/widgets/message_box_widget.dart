@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MessageBoxWidget extends StatelessWidget {
+class MessageBoxWidget extends ConsumerStatefulWidget {
   final Icon icon;
   final String title;
   final String subTitle;
@@ -13,6 +14,12 @@ class MessageBoxWidget extends StatelessWidget {
     required this.subTitle,
   });
 
+  @override
+  ConsumerState<MessageBoxWidget> createState() => _MessageBoxWidgetState();
+}
+
+class _MessageBoxWidgetState extends ConsumerState<MessageBoxWidget> {
+bool light = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,14 +36,14 @@ class MessageBoxWidget extends StatelessWidget {
             color: Color(0xFFEAF6FD),
             borderRadius: BorderRadius.circular(100.r),
           ),
-          child: icon,
+          child: widget.icon,
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              title,
+              widget.title,
               style: TextStyle(
                 fontSize: 18.sp,
                 color: Color(0xFF070707),
@@ -45,7 +52,7 @@ class MessageBoxWidget extends StatelessWidget {
             ),
             SizedBox(height: 10.h),
             Text(
-              subTitle,
+              widget.subTitle,
               style: TextStyle(
                 fontSize: 16.sp,
                 color: Color(0xFF4A4C56),
@@ -56,7 +63,18 @@ class MessageBoxWidget extends StatelessWidget {
         ),
         trailing: SizedBox(
           height: 70.h,
-          child: Switch(value: true, onChanged: (value) {}),
+          child: Switch(
+            /// This bool value toggles the switch
+            value: light,
+            activeThumbColor: Color(0xFF2FA4E7),
+            onChanged: (bool value) {
+              /// This is called when the user toggles the switch
+              setState(() {
+                light = value;
+                debugPrint("======== Light $light ===========");
+              });
+            },
+          ),
         ),
       ),
     );
