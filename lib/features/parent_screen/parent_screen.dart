@@ -27,7 +27,7 @@ class _ParentScreenState extends ConsumerState<ParentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //Watch the current index from the provider
+    /// -------- Watch the current index from the provider ---------------------
     final currentIndex = ref.watch(currentIndexProvider);
     return Scaffold(
       body: _pages[currentIndex],
@@ -37,6 +37,8 @@ class _ParentScreenState extends ConsumerState<ParentScreen> {
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
           currentIndex: currentIndex,
+          selectedIconTheme: IconThemeData(color: Color(0xFF2FA4E7)),
+          selectedItemColor: Color(0xFF2FA4E7),
           onTap: (index) {
             ref.read(currentIndexProvider.notifier).state = index;
           },
