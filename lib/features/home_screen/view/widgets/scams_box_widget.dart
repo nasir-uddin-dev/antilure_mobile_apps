@@ -6,12 +6,14 @@ class ScamsBoxWidget extends StatelessWidget {
   final String subTitle;
   final Icon icon;
   final VoidCallback onTap;
+  final Color color;
   const ScamsBoxWidget({
     super.key,
     required this.title,
     required this.subTitle,
     required this.icon,
     required this.onTap,
+    required this.color
   });
 
   @override
@@ -43,7 +45,7 @@ class ScamsBoxWidget extends StatelessWidget {
               width: 64.r,
               height: 64.r,
               decoration: BoxDecoration(
-                color: Color(0xFFEAF6FD),
+                color: color,
                 borderRadius: BorderRadius.circular(100.r),
               ),
               child: Center(child: icon),
