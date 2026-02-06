@@ -14,9 +14,11 @@ class ReportScreen extends StatelessWidget {
       backgroundColor: Color(0xFFF2F2F2),
       body: Column(
         children: [
+          /// ----------------------- App Bar ----------------------------------
           AppBarWidget(
-            title: "I Think This Is a Scame",
-            subTitle: "Get step-by-step guidence.",
+            isIconPresent: false,
+            title: "I Think This Is a Scam",
+            subTitle: "Get step-by-step guidance.",
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -82,7 +84,7 @@ class ReportScreen extends StatelessWidget {
                   SizedBox(height: 10.h),
                   MessageBoxWidget(
                     icon: Icon(
-                      Icons.phone_android,
+                      Icons.phone_outlined ,
                       color: Colors.blue.shade600,
                     ),
                     title: "Suspicious Phone Call",
@@ -92,7 +94,7 @@ class ReportScreen extends StatelessWidget {
                   SizedBox(height: 10.h),
                   MessageBoxWidget(
                     icon: Icon(
-                      Icons.phone_android,
+                      Icons.phone_android_outlined,
                       color: Colors.blue.shade600,
                     ),
                     title: "Fake Delivery Message",
