@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent,),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       backgroundColor: Color(0xFFF2F2F2),
       extendBodyBehindAppBar: true,
       body: Column(
@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  // Display logo, text and notification inside container
+                  /// Display logo, text and notification inside container
                   Container(
                     width: double.infinity,
                     height: 163.h,
@@ -114,6 +114,7 @@ class HomeScreen extends StatelessWidget {
                       size: 32.sp,
                       color: Color(0xFF2FA4E7),
                     ),
+                    color: Color(0xFFEAF6FD),
                   ),
                   ScamsBoxWidget(
                     onTap: () => Navigator.pushNamed(
@@ -127,6 +128,7 @@ class HomeScreen extends StatelessWidget {
                       size: 32.sp,
                       color: Color(0xFF4145EF),
                     ),
+                    color: Color(0xFFEEF2FF),
                   ),
                   ScamsBoxWidget(
                     onTap: () {},
@@ -137,6 +139,7 @@ class HomeScreen extends StatelessWidget {
                       size: 32.sp,
                       color: Color(0xFFF97316),
                     ),
+                    color: Color(0xFFFFF7ED),
                   ),
                 ],
               ),
