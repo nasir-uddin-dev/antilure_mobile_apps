@@ -67,6 +67,7 @@ bool light = true;
             /// This bool value toggles the switch
             value: light,
             activeThumbColor: Color(0xFF2FA4E7),
+            thumbColor: const WidgetStatePropertyAll<Color>(Colors.white),
             onChanged: (bool value) {
               /// This is called when the user toggles the switch
               setState(() {
