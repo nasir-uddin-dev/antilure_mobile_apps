@@ -17,7 +17,7 @@ class ParentScreen extends ConsumerStatefulWidget {
 }
 
 class _ParentScreenState extends ConsumerState<ParentScreen> {
-  // list of pages to display
+  ///--------------- list of pages to display ----------------------------------
   final List<Widget> _pages = [
     HomeScreen(),
     ReportScreen(),

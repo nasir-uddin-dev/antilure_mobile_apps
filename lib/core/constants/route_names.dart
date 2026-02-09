@@ -11,4 +11,8 @@ class RouteNames {
       '/lastSuspiciousTextMessageScreen';
   static const String historyScreen = '/historyScreen';
   static const String settingScreen = '/settingScreen';
+  static const String helpNowScreen = '/helpNowScreen';
+  static const String myReportsScreen = '/myReportsScreen';
+  static const String webViewScreen = '/webViewScreen';
+  static const String historyDetailScreen = '/historyDetailScreen';
 }

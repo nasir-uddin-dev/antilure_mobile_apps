@@ -19,6 +19,7 @@ class ReportScreen extends StatelessWidget {
             isIconPresent: false,
             title: "I Think This Is a Scam",
             subTitle: "Get step-by-step guidance.",
+            notificationCount: 2,
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -82,34 +83,58 @@ class ReportScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
-                  MessageBoxWidget(
-                    icon: Icon(
-                      Icons.phone_outlined ,
-                      color: Colors.blue.shade600,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.suspiciousTextMessageScreen,
+                      );
+                    },
+                    child: MessageBoxWidget(
+                      icon: Icon(
+                        Icons.phone_outlined,
+                        color: Colors.blue.shade600,
+                      ),
+                      title: "Suspicious Phone Call",
+                      subTitle:
+                          "Someone calling about taxes, tech support, or your accout?",
                     ),
-                    title: "Suspicious Phone Call",
-                    subTitle:
-                        "Someone calling about taxes, tech support, or your accout?",
                   ),
                   SizedBox(height: 10.h),
-                  MessageBoxWidget(
-                    icon: Icon(
-                      Icons.phone_android_outlined,
-                      color: Colors.blue.shade600,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.suspiciousTextMessageScreen,
+                      );
+                    },
+                    child: MessageBoxWidget(
+                      icon: Icon(
+                        Icons.phone_android_outlined,
+                        color: Colors.blue.shade600,
+                      ),
+                      title: "Fake Delivery Message",
+                      subTitle:
+                          "Message about a package you need to pay for or reschedule?",
                     ),
-                    title: "Fake Delivery Message",
-                    subTitle:
-                        "Message about a package you need to pay for or reschedule?",
                   ),
                   SizedBox(height: 10.h),
-                  MessageBoxWidget(
-                    icon: Icon(
-                      Icons.person_outline,
-                      color: Colors.blue.shade600,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteNames.suspiciousTextMessageScreen,
+                      );
+                    },
+                    child: MessageBoxWidget(
+                      icon: Icon(
+                        Icons.person_outline,
+                        color: Colors.blue.shade600,
+                      ),
+                      title: "Social Media Scam",
+                      subTitle:
+                          "Friend asking for money or a too good to be true offer?",
                     ),
-                    title: "Social Media Scam",
-                    subTitle:
-                        "Friend asking for money or a too good to be true offer?",
                   ),
                 ],
               ),

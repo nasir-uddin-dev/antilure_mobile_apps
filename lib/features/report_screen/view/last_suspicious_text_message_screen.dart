@@ -24,6 +24,7 @@ class _LastSuspiciousTextMessageScreenState
           AppBarWidget(
             title: "Suspicious Text Message",
             subTitle: "Got a strange text message?",
+            notificationCount: 2,
           ),
           Expanded(
             child: Padding(
@@ -99,7 +100,7 @@ class _LastSuspiciousTextMessageScreenState
                     child: customButton(
                       text: "Done",
                       onTap: () {
-                        Navigator.pushNamed(context, RouteNames.historyScreen);
+                        Navigator.pushNamed(context, RouteNames.reportScreen);
                       },
                     ),
                   ),

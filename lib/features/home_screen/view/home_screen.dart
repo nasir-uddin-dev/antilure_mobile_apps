@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              // Header section
+              ///--------------------- Header section --------------------------
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
                 child: Column(
@@ -107,7 +107,7 @@ class HomeScreen extends StatelessWidget {
                       context,
                       RouteNames.checkLinkScreen,
                     ),
-                    title: "Check a Link",
+                    title: "Link Check",
                     subTitle: "Paste a URL to see if it's safe",
                     icon: Icon(
                       Ionicons.link_outline,
@@ -121,8 +121,8 @@ class HomeScreen extends StatelessWidget {
                       context,
                       RouteNames.scanQrCodeScreen,
                     ),
-                    title: "Scan QR Code",
-                    subTitle: "Safely scan QR codes before opening them",
+                    title: "QR Scanner",
+                    subTitle: "Scan QR codes safely before opening",
                     icon: Icon(
                       Ionicons.qr_code_outline,
                       size: 32.sp,
@@ -131,8 +131,11 @@ class HomeScreen extends StatelessWidget {
                     color: Color(0xFFEEF2FF),
                   ),
                   ScamsBoxWidget(
-                    onTap: () {},
-                    title: "I Think This Is a Scam",
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.helpNowScreen,
+                    ),
+                    title: "Help Now",
                     subTitle: "Get step-by-step guidance if you suspect fraud",
                     icon: Icon(
                       Ionicons.alert_outline,
@@ -140,6 +143,48 @@ class HomeScreen extends StatelessWidget {
                       color: Color(0xFFF97316),
                     ),
                     color: Color(0xFFFFF7ED),
+                  ),
+                  ScamsBoxWidget(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.reportScreen,
+                    ),
+                    title: "Report Scam",
+                    subTitle: "Save a scam incident to your local records",
+                    icon: Icon(
+                      Ionicons.warning_outline,
+                      size: 32.sp,
+                      color: Color(0xFFDC2626),
+                    ),
+                    color: Color(0xFFFFEDED),
+                  ),
+                  ScamsBoxWidget(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.myReportsScreen,
+                    ),
+                    title: "My Reports",
+                    subTitle: "View all your saved scam reports",
+                    icon: Icon(
+                      Ionicons.document_text_outline,
+                      size: 32.sp,
+                      color: Color(0xFF10B981),
+                    ),
+                    color: Color(0xFFE9FAF3),
+                  ),
+                  ScamsBoxWidget(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteNames.settingScreen,
+                    ),
+                    title: "Safety Mode",
+                    subTitle: "Adjust text size and display settings",
+                    icon: Icon(
+                      Ionicons.settings_outline,
+                      size: 32.sp,
+                      color: Color(0xFF6B7280),
+                    ),
+                    color: Color(0xFFF3F4F6),
                   ),
                 ],
               ),

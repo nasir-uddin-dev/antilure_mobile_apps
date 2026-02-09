@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// Create this provider in your providers directory
+/// ------------- Create this provider in your providers directory -------------
 final suspiciousTextPageProvider = StateProvider<int>((ref) => 0);
 
 class SuspiciousTextMessageScreen extends ConsumerStatefulWidget {
@@ -33,12 +33,13 @@ class _SuspiciousTextMessageScreenState
   void _nextPage() {
     final currentPage = ref.read(suspiciousTextPageProvider);
     if (currentPage < 3) {
-      // Changed from 1 to 3 (0-3 = 4 pages)
+      /// --------------- Changed from 1 to 3 (0-3 = 4 pages) ------------------
       _pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
       ref.read(suspiciousTextPageProvider.notifier).state = currentPage + 1;
+      debugPrint("=========== Next page ${currentPage + 1}============");
     }
   }
 
@@ -50,18 +51,19 @@ class _SuspiciousTextMessageScreenState
         curve: Curves.easeInOut,
       );
       ref.read(suspiciousTextPageProvider.notifier).state = currentPage - 1;
+      debugPrint("=========== Previous page ${currentPage - 1}============");
     }
   }
 
   void _submitReport() {
-    // Handle report submission
+    /// Handle report submission
     debugPrint("Submitting report...");
     Navigator.pushNamed(context, RouteNames.lastSuspiciousTextMessageScreen);
   }
 
   @override
   Widget build(BuildContext context) {
-    // Watch the page provider to rebuild when page changes
+    ///  ------------- Watch the page provider to rebuild when page changes ----
     final currentPage = ref.watch(suspiciousTextPageProvider);
 
     return Scaffold(
@@ -70,6 +72,7 @@ class _SuspiciousTextMessageScreenState
           AppBarWidget(
             title: "Suspicious Text Message",
             subTitle: "Got a strange text message?",
+            notificationCount: 2,
           ),
           SizedBox(height: 16.h),
           Padding(
@@ -105,7 +108,7 @@ class _SuspiciousTextMessageScreenState
                       controller: _pageController,
                       physics: NeverScrollableScrollPhysics(),
                       onPageChanged: (page) {
-                        // Update Riverpod state when page changes
+                        /// -------- Update Riverpod state when page changes ---
                         ref.read(suspiciousTextPageProvider.notifier).state =
                             page;
                       },
@@ -140,12 +143,12 @@ class _SuspiciousTextMessageScreenState
   }
 
   Widget _buildBottomButtons(int currentPage) {
-    // On last page (step 4), show only "Submit Report" button
+    ///------------ On last page (step 4), show only "Submit Report" button-----
     if (currentPage == 3) {
       return customButton(text: "Submit Report", onTap: _submitReport);
     }
 
-    // On other pages, show Previous and Next buttons
+    ///------------- On other pages, show Previous and Next buttons ------------
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
